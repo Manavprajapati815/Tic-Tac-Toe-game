@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:game/home_page.dart'; // ✅ Make sure the path and filename are correct
+import 'package:game/home_page.dart';
+import 'package:get/get_navigation/src/root/get_material_app.dart'; // ✅ Make sure the path and filename are correct
 
 void main() {
   runApp(const MyApp());
@@ -10,10 +11,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       title: 'Flutter Demo',
 
-      // ✅ Light Theme
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(
           seedColor: Colors.deepPurple,
@@ -22,7 +22,6 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
 
-      // ✅ Dark Theme
       darkTheme: ThemeData(
         colorScheme: ColorScheme.fromSeed(
           seedColor: Colors.deepPurple,
