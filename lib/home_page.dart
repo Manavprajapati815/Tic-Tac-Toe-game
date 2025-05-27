@@ -23,11 +23,11 @@ class HomePage extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                Container(
+                Obx(()=>(Container(
                   padding: EdgeInsets.symmetric(horizontal: 40 , vertical: 40),
                   decoration: BoxDecoration(
                     borderRadius : BorderRadius.circular(30),
-                    color: Colors.redAccent
+                    color: controller.isx.value == false ? const Color.fromARGB(255, 56, 122, 175): Colors.grey[800],
                   ),
                   child: Text("O",
                   style: TextStyle(
@@ -35,20 +35,20 @@ class HomePage extends StatelessWidget {
                   
                   fontWeight: FontWeight.bold,
                 ),),
-          
+          ))
                 ),
-                Container(
+                Obx(()=>(Container(
                   padding: EdgeInsets.symmetric(horizontal: 40 , vertical: 40),
                   decoration: BoxDecoration(
                     borderRadius : BorderRadius.circular(30),
-                    color: Colors.redAccent
+                    color: controller.isx.value == false ?Colors.grey[800]:  const Color.fromARGB(255, 56, 122, 175),
                   ),
                   child: Text("X",
                   style: TextStyle(
                   fontSize: 50,color: Colors.white,
                   
                   fontWeight: FontWeight.bold,
-                ),),
+                ),),))
           
                 ),
               ],
