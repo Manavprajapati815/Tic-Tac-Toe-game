@@ -116,6 +116,7 @@ else{}
 
 void WinnerDialogbox(){
 iswinner.value = true;
+
    Get.defaultDialog(
 
     title: "Winner",
@@ -126,11 +127,11 @@ iswinner.value = true;
         size: 50,
         color: const Color.fromARGB(255, 255, 133, 3),
         ),SizedBox(height: 10), 
-        isx.value? const Text("X is winner",
+        isx.value? const Text("O is winner",
         style: TextStyle(
           fontSize: 30
           ),
-        ): const Text("O is winner",
+        ): const Text("X is winner",
         style: TextStyle(
           fontSize: 30
           ),
